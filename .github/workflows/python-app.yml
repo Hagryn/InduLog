@@ -46,7 +46,8 @@ jobs:
       run: echo ${{ secrets.PERSONAL_TOKEN }} \
         docker login ghcr.io -u Hagryn --password-stdin
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/Hagryn/tp2:latest
+      run: docker build . --file Dockerfile \
+        --tag ghcr.io/Hagryn/InduLog:latest
     - name: Push the image into the registry
       run: docker push ghcr.io/Hagryn/tp2:latest
 

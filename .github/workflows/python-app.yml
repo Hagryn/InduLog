@@ -40,6 +40,9 @@ jobs:
         pytest --cov=. --cov-report=xml
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
+      with:
+        projectKey: ${{ secrets.PERSONAL_TOKEN }}
+        organization: "HE-Arc Ingénierie"
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 

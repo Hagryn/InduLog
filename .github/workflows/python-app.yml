@@ -45,6 +45,7 @@ jobs:
         organization: "HE-Arc Ingénierie"
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ sercets.PERSONAL_TOKEN }}
 
   build-docker-image:
     runs-on: ubuntu-latest

@@ -1,8 +1,9 @@
 FROM python:3.9
 
+RUN useradd --create-home appuser
+
 RUN mkdir /code && chown appuser:appuser /code
 
-RUN useradd --create-home appuser
 USER appuser
 
 WORKDIR /code
